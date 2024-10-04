@@ -1,0 +1,30 @@
+@import 'common/fonts.scss';
+@import 'common/buttons.css';
+@import 'common/accordion.scss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    @apply h-full w-full bg-green-950 text-white lg:text-20 sm:text-18 text-14;
+
+    p, ol, ul {
+      @apply leading-[1.4] opacity-70;
+    }
+
+    p {
+      a {
+        @apply transition hover:text-yellow-550;
+      }
+    }
+  }
+
+  ol {
+    @apply list-decimal pl-20;
+  }
+
+  ul {
+    @apply list-disc  pl-20;
+  }
+}

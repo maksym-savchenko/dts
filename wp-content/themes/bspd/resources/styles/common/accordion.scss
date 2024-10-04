@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.accordion-item {
+  @apply p-24 border border-emerald-950 bg-emerald-950 rounded-8 transition duration-500;
+}
+
+.accordion-item__title {
+  @apply font-bold leading-[1.4] pr-25 relative cursor-pointer hover:opacity-70 transition-opacity duration-500 opacity-100;
+}
+
+.accordion-item__title span {
+  @apply absolute top-1/2 right-0 transform -translate-y-1/2 inline-block w-20 h-20 rounded-full border-2 border-yellow-550
+  before:content-[''] before:inline-block before:w-9 before:h-2 before:bg-yellow-550 before:rounded-2 before:absolute before:top-1/2 before:left-1/2 before:transform before:-translate-y-1/2 before:-translate-x-1/2
+  after:content-[''] after:inline-block after:w-9 after:h-2 after:bg-yellow-550 after:rounded-2 after:absolute after:top-1/2 after:left-1/2 after:transform after:-translate-y-1/2 after:-translate-x-1/2 after:rotate-90 after:transition-all after:ease-in-out after:duration-500
+}
+
+.accordion-item__text {
+  @apply overflow-hidden max-h-0 transition-all ease-in-out duration-1000;
+}
+
+.accordion-item.active {
+  @apply border-yellow-550
+}
+
+.accordion-item.active .accordion-item__title span {
+  @apply after:rotate-0;
+}
+
+.accordion-item.active .accordion-item__text {
+  @apply max-h-[2500px];
+}

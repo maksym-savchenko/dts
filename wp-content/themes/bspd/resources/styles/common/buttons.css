@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+  @apply xsm:min-w-[280px] min-h-[60px] min-w-full border transition rounded-5 p-17 inline-flex items-center justify-center text-18 font-bold leading-[1.33];
+}
+
+.btn.btn--yellow {
+  @apply border-yellow-550 text-green-950 bg-yellow-550;
+}
+
+.btn.btn--white:hover {
+  @apply border-white text-emerald-950 bg-white;
+}
+
+.btn.btn--yellow:hover {
+  @apply bg-transparent text-yellow-550;
+}
