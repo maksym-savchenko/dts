@@ -8,6 +8,10 @@
 
 .btn.btn--yellow {
   @apply border-yellow-550 text-green-950 bg-yellow-550;
+
+  &.btn--small {
+    @apply min-w-[215px] min-h-[35px] sm:text-18 py-5 px-21 mt-0 text-14;
+  }
 }
 
 .btn.btn--white:hover {

@@ -21,6 +21,9 @@ const config = {
         yellow: {
           '550': '#ffee00',
         },
+        gray: {
+          '550': '#828282',
+        }
       },
       fontFamily: {
         sans: 'Montserrat, sans-serif',
