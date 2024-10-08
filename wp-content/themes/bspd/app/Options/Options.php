@@ -30,8 +30,17 @@ class Options extends Field
 
         $fields
             ->addTab('Інформація Хедер')
+            ->addText('header_phone', [
+                'label' => 'Номер телефону',
+                'wrapper' => [
+                    'width' => '50',
+                ]
+            ])
             ->addLink('header_link', [
                 'label' => 'Кнопка в хедері',
+                'wrapper' => [
+                    'width' => '50',
+                ]
             ])
             ->addTab('Контакти')
             ->addTextarea('contacts_title', [

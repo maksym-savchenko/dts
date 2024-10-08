@@ -9,7 +9,7 @@
 
 @section('content')
   <div class="container">
-    <div class="mt-32 mb-48 rounded-20 py-83 px-30 bg-emerald-950 text-center">
+    <div class="mt-157 mb-48 rounded-20 py-83 px-30 bg-emerald-950 text-center">
       <h1 class="lg:text-[160px] sm:text-[120px] text-[80px] font-extrabold uppercase text-yellow-550 leading-[1]">{{$title}}</h1>
       <h2 class="lg:text-48 sm:text-36 text-30 font-extrabold uppercase text-yellow-550 leading-[1.25] mt-20">{{ $subtitle }}</h2>
       <p class="max-w-[720px] mt-28 mx-auto">{!! $text !!}</p>
