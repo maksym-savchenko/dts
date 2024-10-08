@@ -109,6 +109,17 @@ class Options extends Field
                     'class' => '',
                     'id' => '',
                 ],
+            ])
+            ->addTab('404')
+            ->addText('404_title', [
+                'label' => 'Заголовок'
+            ])
+            ->addText('404_subtitle', [
+                'label' => 'Пізгаловок'
+            ])
+            ->addTextarea('404_description', [
+                'label' => 'Спис',
+                'new_lines' => 'br',
             ]);
 
         return $fields->build();

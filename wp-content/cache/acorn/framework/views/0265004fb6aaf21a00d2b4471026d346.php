@@ -1,33 +1,22 @@
+<?php
+  $options = get_fields('options');
+  $title = $options['404_title'] ?: __('404', 'sage');
+  $subtitle = $options['404_subtitle'] ?: __('Сторінка не знайдена', 'sage');
+  $text = $options['404_description'] ?: __('На жаль, сторінка, яку ви шукаєте, не існує. Можливо, вона була видалена, переміщена або посилання було введене неправильно.', 'sage');
+?>
+
+
+
 <?php $__env->startSection('content'); ?>
-  <?php echo $__env->make('partials.page-header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+  <div class="container">
+    <div class="mt-32 mb-48 rounded-20 py-83 px-30 bg-emerald-950 text-center">
+      <h1 class="lg:text-[160px] sm:text-[120px] text-[80px] font-extrabold uppercase text-yellow-550 leading-[1]"><?php echo e($title); ?></h1>
+      <h2 class="lg:text-48 sm:text-36 text-30 font-extrabold uppercase text-yellow-550 leading-[1.25] mt-20"><?php echo e($subtitle); ?></h2>
+      <p class="max-w-[720px] mt-28 mx-auto"><?php echo $text; ?></p>
+      <a href="<?php echo e(home_url('/')); ?>" title="<?php echo e(get_bloginfo('name')); ?>" class="btn btn--yellow lg:mt-45 mt-20"><?php echo e(__('На головну', 'sage')); ?></a>
 
-  <?php if(! have_posts()): ?>
-    <?php if (isset($component)) { $__componentOriginal5194778a3a7b899dcee5619d0610f5cf = $component; } ?>
-<?php if (isset($attributes)) { $__attributesOriginal5194778a3a7b899dcee5619d0610f5cf = $attributes; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.alert','data' => ['type' => 'warning']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
-<?php $component->withName('alert'); ?>
-<?php if ($component->shouldRender()): ?>
-<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
-<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
-<?php endif; ?>
-<?php $component->withAttributes(['type' => 'warning']); ?>
-      <?php echo __('Sorry, but the page you are trying to view does not exist.', 'sage'); ?>
-
-     <?php echo $__env->renderComponent(); ?>
-<?php endif; ?>
-<?php if (isset($__attributesOriginal5194778a3a7b899dcee5619d0610f5cf)): ?>
-<?php $attributes = $__attributesOriginal5194778a3a7b899dcee5619d0610f5cf; ?>
-<?php unset($__attributesOriginal5194778a3a7b899dcee5619d0610f5cf); ?>
-<?php endif; ?>
-<?php if (isset($__componentOriginal5194778a3a7b899dcee5619d0610f5cf)): ?>
-<?php $component = $__componentOriginal5194778a3a7b899dcee5619d0610f5cf; ?>
-<?php unset($__componentOriginal5194778a3a7b899dcee5619d0610f5cf); ?>
-<?php endif; ?>
-
-    <?php echo get_search_form(false); ?>
-
-  <?php endif; ?>
+    </div>
+  </div>
 <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Users/maksym/Local Sites/donbas/app/public/wp-content/themes/bspd/resources/views/404.blade.php ENDPATH**/ ?>

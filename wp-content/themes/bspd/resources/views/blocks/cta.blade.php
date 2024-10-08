@@ -1,5 +1,5 @@
 @if($title || $description || $link)
-  <div class="{{ $block->classes }} md:mt-100 md:mt82 mt-50 mb-41" {{ isset($block->block->anchor) ? 'id="' . $block->block->anchor . '"' : '' }}>
+  <div class="{{ $block->classes }} md:mt-100 md:mb-82 mt-50 mb-41" {{ isset($block->block->anchor) ? 'id="' . $block->block->anchor . '"' : '' }}>
     <div class="container">
       <div class="rounded-10 bg-emerald-950 text-center lg:py-77 md:py-50 py-40 px-20">
         @if($title)

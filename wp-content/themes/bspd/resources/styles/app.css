@@ -9,6 +9,14 @@
   html, body {
     @apply h-full w-full bg-green-950 text-white lg:text-20 text-18;
 
+    #app {
+      @apply flex flex-col justify-between items-stretch min-h-full
+    }
+
+    #main {
+      @apply flex-1;
+    }
+
     p, ol, ul {
       @apply leading-[1.4] opacity-70;
     }
