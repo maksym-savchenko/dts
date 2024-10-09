@@ -6,7 +6,7 @@ $messengers = $options['messengers'] ?: '';
 $social_title = $options['social_title'] ?: '';
 $socials = $options['socials'] ?: '';
 $copyright = $options['copyright'] ?: '';
-$custom_logo_id = get_theme_mod('custom_logo'); // Отримуємо ID логотипу
+$custom_logo_id = get_theme_mod('custom_logo');
 $logo = wp_get_attachment_image($custom_logo_id, 'medium');
 if ($copyright) {
   $copyright = str_replace('@year', date('Y'), $copyright);

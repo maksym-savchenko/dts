@@ -22,6 +22,7 @@ const config = {
           '550': '#ffee00',
         },
         gray: {
+          '450': '#c8c8c8',
           '550': '#828282',
         }
       },
@@ -33,7 +34,7 @@ const config = {
       },
       screens: {
         'xsm': '540px',
-        'xlg': '1110px',
+        'xlg': '1170px',
       },
       fontSize: {
         'responsiveMenuItem': 'clamp(30px, 9vw, 120px)',

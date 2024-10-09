@@ -1,6 +1,7 @@
 @import 'common/fonts.scss';
 @import 'common/buttons.css';
 @import 'common/accordion.scss';
+@import 'common/header.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

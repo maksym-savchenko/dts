@@ -96,3 +96,10 @@ add_filter( 'block_categories', function ($categories) {
         $categories
     );
 }, 10, 2);
+
+add_action('template_redirect', function() {
+    if (is_search()) {
+        wp_redirect(home_url('/'));
+        exit;
+    }
+});

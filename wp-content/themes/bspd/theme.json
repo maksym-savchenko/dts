@@ -121,6 +121,11 @@
           "slug": "gray-400"
         },
         {
+          "color": "#c8c8c8",
+          "name": "Gray 450",
+          "slug": "gray-450"
+        },
+        {
           "color": "#6b7280",
           "name": "Gray 500",
           "slug": "gray-500"
