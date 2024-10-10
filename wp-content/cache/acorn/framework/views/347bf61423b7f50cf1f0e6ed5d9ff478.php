@@ -115,4 +115,5 @@ if ($copyright) {
       </div>
   <?php endif; ?>
 </footer>
+<?php echo $__env->make('partials.form-popup', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 <?php /**PATH /Users/maksym/Local Sites/donbas/app/public/wp-content/themes/bspd/resources/views/sections/footer.blade.php ENDPATH**/ ?>

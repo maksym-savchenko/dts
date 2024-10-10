@@ -129,6 +129,14 @@ class Options extends Field
             ->addTextarea('404_description', [
                 'label' => 'Спис',
                 'new_lines' => 'br',
+            ])
+            ->addTab('Форма')
+            ->addText('form_shortcode', [
+                'instructions' => 'Шорткод виду [gravityform id="1" title="true" description="true" ajax="true"]',
+                'label' => 'Шорткод форми'
+            ])
+            ->addText('submit_button_text', [
+                'label' => 'Напис під кнопкою подати заявку'
             ]);
 
         return $fields->build();

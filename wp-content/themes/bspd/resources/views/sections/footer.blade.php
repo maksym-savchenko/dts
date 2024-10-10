@@ -109,3 +109,4 @@ if ($copyright) {
       </div>
   @endif
 </footer>
+@include('partials.form-popup')
