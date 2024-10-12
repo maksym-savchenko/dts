@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.popup-wrapper {
+  .popup-content {
+    @apply rounded-10 bg-emerald-950 pt-77 pb-83 px-30 relative;
+
+    .popup-close {
+      @apply absolute top-0 right-0 p-20;
+    }
+  }
+}

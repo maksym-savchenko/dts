@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.gform-theme--framework.gform_wrapper {
+  .gform_heading {
+    @apply max-w-[900px] mx-auto text-center;
+
+    h2 {
+      @apply text-center leading-[1.25] lg:text-48 md:text-36 text-26 uppercase font-extrabold text-yellow-550 mb-20;
+    }
+
+    .gform_description {
+      @apply max-w-[605px] mx-auto mb-40;
+    }
+  }
+
+  form {
+    @apply max-w-[726px] mx-auto;
+
+   .gform_body {
+     .gform_fields {
+       @apply gap-x-22 gap-y-20;
+     }
+
+     input {
+       @apply h-48 rounded-5 bg-emerald-950 text-white border-white;
+     }
+
+     .gfield_checkbox {
+       input {
+         @apply h-20 w-20 rounded-1;
+
+         &:checked {
+           &::before {
+             @apply text-white;
+           }
+         }
+       }
+
+       .gform-field-label {
+         @apply text-white sm:text-18 text-opacity-70;
+       }
+     }
+
+     .gfield--type-checkbox {
+       @apply sm:col-span-6;
+     }
+
+     .spacer {
+       @apply hidden;
+     }
+
+     .gfield.gfield--type-submit {
+       @apply sm:col-span-6;
+
+       .form-submit-btn {
+         @apply btn btn--yellow bg-yellow-550 text-emerald-950 w-full block mb-20 border-yellow-550 hover:bg-emerald-950 cursor-pointer hover:text-yellow-550 !min-w-auto;
+       }
+
+       p {
+         @apply text-14 leading-[1.3] opacity-70;
+       }
+
+       .gform_confirmation_wrapper {
+         @apply min-h-[400px];
+       }
+     }
+   }
+  }
+}

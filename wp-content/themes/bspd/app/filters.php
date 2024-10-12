@@ -106,7 +106,7 @@ add_action('template_redirect', function() {
 
 add_filter( 'gform_submit_button', function ($button, $form) {
     $button__text = get_field('submit_button_text', 'option');
-    return "<button class='btn btn--yellow' id='gform_submit_button_{$form['id']}'>
+    return "<button class='form-submit-btn' id='gform_submit_button_{$form['id']}'>
               {$form['button']['text']}</button>
               <p class=''>$button__text</p>";
 }, 10, 2 );

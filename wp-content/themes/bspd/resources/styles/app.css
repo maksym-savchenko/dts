@@ -2,6 +2,8 @@
 @import 'common/buttons.css';
 @import 'common/accordion.scss';
 @import 'common/header.css';
+@import 'common/popup.css';
+@import 'common/form.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -35,5 +37,15 @@
 
   ul {
     @apply list-disc  pl-20;
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
   }
 }
