@@ -2,6 +2,8 @@ import domReady from '@roots/sage/client/dom-ready';
 import Accordion from "@scripts/modules/accordion.js";
 import HeaderMenu from "@scripts/modules/header-menu.js";
 import PopupForm from "@scripts/modules/popupForm.js";
+import smoothScrollToAnchor from "@scripts/modules/smoothScrollToAnchor.js";
+import SmoothScrollToAnchor from "@scripts/modules/smoothScrollToAnchor.js";
 
 /**
  * Application entrypoint
@@ -11,6 +13,8 @@ domReady(async () => {
   new HeaderMenu();
 
   new PopupForm();
+
+ new SmoothScrollToAnchor();
 });
 
 /**

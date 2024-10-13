@@ -1,5 +1,5 @@
 <?php if($title || $desciption || $items): ?>
-  <div class="<?php echo e($block->classes); ?> md:mt-110 md:mt-85 mt-55 mb-41" <?php echo e(isset($block->block->anchor) ? 'id="' . $block->block->anchor . '"' : ''); ?>>
+  <div class="<?php echo e($block->classes); ?> md:mt-110 md:mt-85 mt-55 mb-41" <?php echo e(isset($block->block->anchor) ? 'id=' . $block->block->anchor : ''); ?>>
     <div class="container">
       <?php if($title): ?>
         <h2 class="text-center leading-[1.25] lg:text-48 md:text-36 sm:text-32 text-26 uppercase font-extrabold text-yellow-550 lg:mb-35 mb-32"><?php echo e($title); ?></h2>

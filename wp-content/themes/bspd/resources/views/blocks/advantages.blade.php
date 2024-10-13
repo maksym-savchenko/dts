@@ -1,5 +1,5 @@
 @if($title || $description || $items)
-  <div class="{{ $block->classes }} md:my-[110px] my-55" {{ isset($block->block->anchor) ? 'id="' . $block->block->anchor . '"' : '' }}>
+  <div class="{{ $block->classes }} md:my-[110px] my-55" {{ isset($block->block->anchor) ? 'id=' . $block->block->anchor : '' }}>
     <div class="container">
       @if($title)
         <h2 class="text-center leading-[1.25] lg:text-48 md:text-36 sm:text-32  text-26 uppercase font-extrabold text-yellow-550 lg:mb-64 md:mb-32 mb-20">{{$title}}</h2>

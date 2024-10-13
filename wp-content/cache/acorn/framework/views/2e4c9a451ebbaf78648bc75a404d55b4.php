@@ -1,5 +1,5 @@
 <?php if((count($items) > 0 && isset($items[0]['answer']) && isset($items[0]['question'])) || $title): ?>
-  <div class="<?php echo e($block->classes); ?> md:my-[110px] my-55" <?php echo e(isset($block->block->anchor) ? 'id="' . $block->block->anchor . '"' : ''); ?>>
+  <div class="<?php echo e($block->classes); ?> md:my-[110px] my-55" <?php echo e(isset($block->block->anchor) ? 'id=' . $block->block->anchor : ''); ?>>
     <div class="container">
       <?php if($title): ?>
         <h2 class="text-center leading-[1.25] lg:text-48 md:text-36 sm:text-32 text-26 uppercase font-extrabold text-yellow-550 lg:mb-64 mb-32"><?php echo e($title); ?></h2>
