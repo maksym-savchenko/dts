@@ -11,3 +11,7 @@
     }
   }
 }
+
+.popup-wrapper.popup-visible {
+  @apply touch-auto pointer-events-auto opacity-100;
+}

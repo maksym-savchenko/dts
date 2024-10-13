@@ -16,7 +16,7 @@
 
                 <?php endif; ?>
                 <?php if($item['link']): ?>
-                  <a href="<?php echo e($item['link']['url']); ?>" class="btn btn--yellow lg:mt-45 mt-20" title="<?php echo e($item['link']['title'] ?: ''); ?>" <?php echo e(['target'] ? 'target="' . $item['link']['target'] . '"' : ''); ?>><?php echo e($item['link']['title'] ?: ''); ?></a>
+                  <a href="<?php echo e($item['link']['url']); ?>" class="btn btn--yellow mt-20" title="<?php echo e($item['link']['title'] ?: ''); ?>" <?php echo e(['target'] ? 'target="' . $item['link']['target'] . '"' : ''); ?>><?php echo e($item['link']['title'] ?: ''); ?></a>
                 <?php endif; ?>
               </div>
             </div>

@@ -15,7 +15,7 @@
                   {!! $item['answer'] !!}
                 @endif
                 @if($item['link'])
-                  <a href="{{ $item['link']['url'] }}" class="btn btn--yellow lg:mt-45 mt-20" title="{{ $item['link']['title'] ?: '' }}" {{ ['target'] ? 'target="' . $item['link']['target'] . '"' : '' }}>{{ $item['link']['title'] ?: '' }}</a>
+                  <a href="{{ $item['link']['url'] }}" class="btn btn--yellow mt-20" title="{{ $item['link']['title'] ?: '' }}" {{ ['target'] ? 'target="' . $item['link']['target'] . '"' : '' }}>{{ $item['link']['title'] ?: '' }}</a>
                 @endif
               </div>
             </div>
