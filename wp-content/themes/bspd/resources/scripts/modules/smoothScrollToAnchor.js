@@ -5,7 +5,7 @@ export default class SmoothScrollToAnchor extends Helpers {
     super(props);
     this.offset = 120;
     this.header = document.querySelector('.header');
-    Helpers.registerHandler('click', this.initClickHandler.bind(this), 'a[href^="#"]');
+    this.initAnchorClick();
   }
 
   scrollToAnchor(anchor, offset = this.offset) {
@@ -21,7 +21,7 @@ export default class SmoothScrollToAnchor extends Helpers {
     }
   }
 
-  initClickHandler(target) {
+  clickHandler(target) {
     const targetId = target.getAttribute('href');
     if (targetId !== '#') {
       if (this.header.classList.contains('menu-open')) {
@@ -31,5 +31,14 @@ export default class SmoothScrollToAnchor extends Helpers {
       this.scrollToAnchor(targetId);
       history.pushState(null, null, targetId);
     }
+  }
+
+  initAnchorClick() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.clickHandler(e.target);
+      })
+    })
   }
 }
