@@ -12,9 +12,9 @@
             @if($sub_title)
               <h3 class="text-20 uppercase text-yellow-550 font-bold mb-25">{{ $sub_title }}</h3>
             @endif
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-40 gap-y-15">
-              @foreach($items as $item)
-                <div class="bg-green-950 relative group rounded-10 py-10 px-14 flex justify-between gap-10 items-center cursor-pointer">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-40 gap-y-15 vacancies-wrapper">
+              @foreach($items as $index => $item)
+                <div class="bg-green-950 relative group rounded-10 py-10 px-14 flex justify-between gap-10 items-center cursor-pointer vacancies-item {{ $index > 17 ? 'hidden' : '' }}">
                   <span class="inline-flex sm:w-auto w-full">{{ $item['vacancy'] }}</span>
                   @if($button)
                     <a href="{{ $button['url'] }}" class="btn btn--yellow btn--small opacity-0 group-hover:opacity-100 transition-opacity max-sm:hidden flex-shrink-0" title="{{ $button['title'] ?: '' }}" data-vacancy="{{ $item['vacancy'] }}" {{ ['target'] ? 'target="' . $button['target'] . '"' : '' }}>{{ $button['title'] ?: '' }}</a>
@@ -23,8 +23,8 @@
                 </div>
               @endforeach
             </div>
-            @if(count($items) > 10)
-              <button class="btn btn--white lg:mt-48 mt-35 flex mb-15 mx-auto">
+            @if(count($items) > 18)
+              <button class="btn btn--white vacancies-btn lg:mt-48 mt-35 flex mb-15 mx-auto">
                 {{ $button_label ?: __('Завантажити ще', 'sage') }}
               </button>
             @endif

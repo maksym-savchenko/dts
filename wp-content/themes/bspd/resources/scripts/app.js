@@ -4,12 +4,14 @@ import HeaderMenu from "@scripts/modules/header-menu.js";
 import PopupForm from "@scripts/modules/popupForm.js";
 import smoothScrollToAnchor from "@scripts/modules/smoothScrollToAnchor.js";
 import SmoothScrollToAnchor from "@scripts/modules/smoothScrollToAnchor.js";
+import Vacancies from "@scripts/modules/vacancies.js";
 
 /**
  * Application entrypoint
  */
 domReady(async () => {
-  [...document.querySelectorAll('.wp-block-accordion')].forEach(accordion => new Accordion(accordion));
+  document.querySelectorAll('.wp-block-accordion').forEach(accordion => new Accordion(accordion));
+  document.querySelectorAll('.wp-block-vacancies').forEach(vacancies => new Vacancies(vacancies));
   new HeaderMenu();
 
   new PopupForm();

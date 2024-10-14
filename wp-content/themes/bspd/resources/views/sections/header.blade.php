@@ -11,7 +11,7 @@
   <div class="header-overlay transition-opacity duration-400 xlg:hidden fixed left-0 top-0 right-0 bottom-0 bg-black opacity-0 pointer-events-none touch-none"></div>
   <div class="container">
     <div class="header-wrapper">
-      <a class="brand transition-none" href="{{ home_url('/') }}">
+      <a class="brand transition-none text-white" href="{{ home_url('/') }}">
         {!! $logo !!} {!! $siteName !!}
       </a>
       <button id="menu-toggle" class="menu-toggle xlg:hidden fixed top-26 h-24 w-24 right-15 z-10 p-5 flex items-center justify-center">
@@ -27,7 +27,7 @@
           </nav>
         @endif
         @if($phone || $link)
-            <div class="flex gap-30 max-xlg:flex-col xlg:items-center">
+            <div class="flex gap-30 max-xlg:flex-col xlg:items-center max-xlg:w-full">
               @if($phone)
                 <a class="text-yellow-550 transition-colors duration-300 hover:text-white" href="tel:{{ str_replace(' ', '', $phone) }}"> {{ $phone }}</a>
               @endif

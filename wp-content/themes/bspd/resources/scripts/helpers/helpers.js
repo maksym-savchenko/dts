@@ -34,7 +34,6 @@ export default class Helpers {
   initClick() {
     document.addEventListener('click', (event) => {
       const eventTarget = event.target;
-      event.preventDefault();
       if (Helpers.handlers['click']) {
         Helpers.handlers['click'].forEach(obj => {
           const closestTarget = eventTarget.closest(obj.target);
