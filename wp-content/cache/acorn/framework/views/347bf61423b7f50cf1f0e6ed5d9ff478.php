@@ -33,7 +33,7 @@ if ($copyright) {
                  <?php $__currentLoopData = $messengers; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $messenger): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                    <?php if($messenger['url'] && $messenger['icon']): ?>
                      <a href="<?php echo e($messenger['url']); ?>" target="_blank" title="social-link" class="flex justify-center items-center rounded-2 bg-yellow-550 w-30 h-30 transition-colors duration-300 hover:bg-white">
-                       <img src="<?php echo e($messenger['icon']['url']); ?>" width="24" height="24" alt="social-icon">
+                       <img src="<?php echo e($messenger['icon']['url']); ?>" width="24" height="24" alt="social-icon" class="max-h-24">
                      </a>
                    <?php endif; ?>
                  <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -88,7 +88,7 @@ if ($copyright) {
                       <?php if($social['socials_url'] && $social['icon']): ?>
 
                         <a href="<?php echo e($social['socials_url']); ?>" target="_blank" title="social-link" class="flex justify-center items-center rounded-2 bg-yellow-550 w-30 h-30 transition-colors duration-300 hover:bg-white">
-                          <img src="<?php echo e($social['icon']['url']); ?>" width="24" height="24" alt="social-icon">
+                          <img src="<?php echo e($social['icon']['url']); ?>" width="24" height="24" alt="social-icon" class="max-h-24">
                         </a>
                       <?php endif; ?>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

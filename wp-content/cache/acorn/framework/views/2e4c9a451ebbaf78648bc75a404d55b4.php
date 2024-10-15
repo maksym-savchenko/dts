@@ -8,7 +8,7 @@
         <?php $__currentLoopData = $items; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
           <?php if($item['question'] && ($item['answer'] || $item['link'])): ?>
             <div class="accordion-item">
-              <p class="accordion-item__title"><?php echo e($item['question']); ?><span class="pointer-events-none"></span></p>
+              <p class="accordion-item__title lg:text-20 text-18"><?php echo e($item['question']); ?><span class="pointer-events-none"></span></p>
               <div class="accordion-item__text text-neutral-100 text-opacity-70">
                 <div class="h-8"></div>
                 <?php if($item['answer']): ?>

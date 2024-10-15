@@ -8,7 +8,7 @@
         @foreach ($items as $item)
           @if($item['question'] && ($item['answer'] || $item['link']))
             <div class="accordion-item">
-              <p class="accordion-item__title">{{ $item['question'] }}<span class="pointer-events-none"></span></p>
+              <p class="accordion-item__title lg:text-20 text-18">{{ $item['question'] }}<span class="pointer-events-none"></span></p>
               <div class="accordion-item__text text-neutral-100 text-opacity-70">
                 <div class="h-8"></div>
                 @if($item['answer'])

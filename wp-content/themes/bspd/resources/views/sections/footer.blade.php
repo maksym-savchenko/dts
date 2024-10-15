@@ -32,7 +32,7 @@ if ($copyright) {
                  @foreach($messengers as $messenger)
                    @if($messenger['url'] && $messenger['icon'])
                      <a href="{{ $messenger['url'] }}" target="_blank" title="social-link" class="flex justify-center items-center rounded-2 bg-yellow-550 w-30 h-30 transition-colors duration-300 hover:bg-white">
-                       <img src="{{ $messenger['icon']['url'] }}" width="24" height="24" alt="social-icon">
+                       <img src="{{ $messenger['icon']['url'] }}" width="24" height="24" alt="social-icon" class="max-h-24">
                      </a>
                    @endif
                  @endforeach
@@ -84,7 +84,7 @@ if ($copyright) {
                       @if($social['socials_url'] && $social['icon'])
 
                         <a href="{{ $social['socials_url'] }}" target="_blank" title="social-link" class="flex justify-center items-center rounded-2 bg-yellow-550 w-30 h-30 transition-colors duration-300 hover:bg-white">
-                          <img src="{{ $social['icon']['url'] }}" width="24" height="24" alt="social-icon">
+                          <img src="{{ $social['icon']['url'] }}" width="24" height="24" alt="social-icon" class="max-h-24">
                         </a>
                       @endif
                     @endforeach

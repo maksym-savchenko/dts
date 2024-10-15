@@ -10,7 +10,7 @@
 <header class="header">
   <div class="header-overlay transition-opacity duration-400 xlg:hidden fixed left-0 top-0 right-0 bottom-0 bg-black opacity-0 pointer-events-none touch-none"></div>
   <div class="container">
-    <div class="header-wrapper">
+    <div class="header-wrapper py-15">
       <a class="brand transition-none text-white" href="{{ home_url('/') }}">
         {!! $logo !!} {!! $siteName !!}
       </a>

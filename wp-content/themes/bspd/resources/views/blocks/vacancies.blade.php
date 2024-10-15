@@ -15,7 +15,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-40 gap-y-15 vacancies-wrapper">
               @foreach($items as $index => $item)
                 <div class="bg-green-950 relative group rounded-10 py-10 px-14 flex justify-between gap-10 items-center cursor-pointer vacancies-item {{ $index > 17 ? 'hidden' : '' }}">
-                  <span class="inline-flex sm:w-auto w-full">{{ $item['vacancy'] }}</span>
+                  <span class="inline-flex sm:w-auto w-full lg:text-20 text-18">{{ $item['vacancy'] }}</span>
                   @if($button)
                     <a href="{{ $button['url'] }}" class="btn btn--yellow btn--small opacity-0 group-hover:opacity-100 transition-opacity max-sm:hidden flex-shrink-0" title="{{ $button['title'] ?: '' }}" data-vacancy="{{ $item['vacancy'] }}" {{ ['target'] ? 'target="' . $button['target'] . '"' : '' }}>{{ $button['title'] ?: '' }}</a>
                     <a href="{{ $button['url'] }}" class="opacity-0 absolute sm:hidden left-0 top-0 w-full h-full" title="{{ $button['title'] ?: '' }}" data-vacancy="{{ $item['vacancy'] }}" {{ ['target'] ? 'target="' . $button['target'] . '"' : '' }}>{{ $button['title'] ?: '' }}</a>
