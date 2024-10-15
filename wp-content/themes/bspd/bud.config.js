@@ -34,7 +34,7 @@ export default async (app) => {
    */
   app
     .setUrl('http://localhost:3000')
-    .setProxyUrl('http://donbas.local')
+    .setProxyUrl('https://donbas.army')
     .watch(['resources/views', 'app']);
 
   /**
