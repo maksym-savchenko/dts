@@ -1,4 +1,4 @@
-@if($title || $image || $text || $link)
+@if(($title || $image || $text || $link) && !$hide_section)
   <div class="{{ $block->classes }} md:my-[110px] my-55" {{ isset($block->block->anchor) ? 'id=' . $block->block->anchor : '' }}>
     <div class="container">
       <div class="flex flex-col-reverse items-center lg:gap-70 gap-30 md:flex-row">

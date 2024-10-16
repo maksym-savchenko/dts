@@ -133,6 +133,7 @@ class ImageTextColumn extends Block
             'title' => $this->get_group_item_value('title'),
             'text' => $this->get_group_item_value('text'),
             'link' => $this->get_group_item_value('link'),
+            'hide_section' => $this->get_value('hide_section'),
         ];
     }
 
@@ -148,6 +149,17 @@ class ImageTextColumn extends Block
                     'label' => 'Зображення-Текст',
                 ]
             )
+            ->addTrueFalse('hide_section', [
+                'label' => 'Видимість секцї',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => [],
+                'message' => '',
+                'default_value' => 0,
+                'ui' => 1,
+                'ui_on_text' => 'Прихована',
+                'ui_off_text' => 'Секція видима',
+            ])
             ->addImage('image', [
                 'label' => 'Зображення',
                 'wrapper' => [
@@ -186,7 +198,7 @@ class ImageTextColumn extends Block
      *
      * @return array
      */
-    public function get_value($field): array|string
+    public function get_value($field): array|string|bool
     {
         return get_field($field) ?: '';
     }

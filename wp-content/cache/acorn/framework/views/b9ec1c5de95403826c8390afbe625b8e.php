@@ -1,4 +1,4 @@
-<?php if($title || $image || $text || $link): ?>
+<?php if(($title || $image || $text || $link) && !$hide_section): ?>
   <div class="<?php echo e($block->classes); ?> md:my-[110px] my-55" <?php echo e(isset($block->block->anchor) ? 'id=' . $block->block->anchor : ''); ?>>
     <div class="container">
       <div class="flex flex-col-reverse items-center lg:gap-70 gap-30 md:flex-row">

@@ -13,7 +13,7 @@ if ($copyright) {
 }
 ?>
 
-<footer class="site-footer bg-emerald-950">
+ <footer class="site-footer bg-emerald-950" id="site-footer">
   @if ($contacts_title || $contacts || $messengers_title || $messengers || $social_title || $socials)
     <div class="container">
       <div class="md:pt-51 pt-63 md:pb-43 mb-26 flex gap-30 justify-between flex-wrap">
