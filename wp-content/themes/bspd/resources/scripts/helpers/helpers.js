@@ -101,6 +101,10 @@ export default class Helpers {
     const body = document.body;
     const scrollY = (body.style.top = `-${window.scrollY}px`);
 
+    console.log(window.scrollY);
+
+    window.scrollY > 0 && body.classList.add('body-scrolled');
+
     body.classList.add('disable-scroll');
     body.style.top = `${scrollY}px`;
     body.style.position = 'fixed';
@@ -113,6 +117,7 @@ export default class Helpers {
     const doc = document.documentElement;
     const scrollY = body.style.top;
 
+    body.classList.remove('body-scrolled');
     body.classList.remove('disable-scroll');
     doc.style.scrollBehavior = 'unset';
     body.style.position = '';

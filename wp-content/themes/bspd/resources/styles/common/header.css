@@ -53,3 +53,9 @@
 .header.scrolled {
   @apply bg-emerald-950 shadow;
 }
+
+.body-scrolled {
+  .header {
+    @apply bg-emerald-950 shadow;
+  }
+}
