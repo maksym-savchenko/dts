@@ -1,6 +1,6 @@
 import Helpers from "@scripts/helpers/helpers.js";
 class Accordion extends Helpers {
-  constructor(vacancies) {
+  constructor() {
     super();
     this.vacancies = document.querySelector('.vacancies-wrapper');
     this.vacancies && Helpers.registerHandler('click', this.handleClick.bind(this), '.vacancies-btn');
@@ -8,7 +8,6 @@ class Accordion extends Helpers {
 
   handleClick(target) {
     if(!target) return;
-    console.log(target);
     const wrapper = target.previousElementSibling;
     this.showItems(wrapper);
     target.remove();

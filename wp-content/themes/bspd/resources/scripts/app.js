@@ -10,8 +10,8 @@ import Vacancies from "@scripts/modules/vacancies.js";
  * Application entrypoint
  */
 domReady(async () => {
-  document.querySelectorAll('.wp-block-accordion').forEach(accordion => new Accordion(accordion));
-  document.querySelectorAll('.wp-block-vacancies').forEach(vacancies => new Vacancies(vacancies));
+  document.querySelector('.wp-block-accordion') && new Accordion();
+  document.querySelector('.wp-block-vacancies') && new Vacancies();
   new HeaderMenu();
 
   new PopupForm();
