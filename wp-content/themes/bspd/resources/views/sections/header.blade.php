@@ -3,8 +3,10 @@
   $custom_logo_id = get_theme_mod('custom_logo');
   $link = $options['header_link'] ?: '';
   $phone = $options['header_phone'] ? : '';
+  $header_bottom = $options['header_bottom'] ? : '';
+  $header_top = $options['header_top'] ? : '';
+  $header_middle = $options['header_middle'] ? : '';
   $logo = wp_get_attachment_image($custom_logo_id, 'medium');
-//  str_replace(' ', '', $contact['contact'])
 @endphp
 
 <header class="header">
@@ -12,7 +14,22 @@
   <div class="container">
     <div class="header-wrapper">
       <a class="brand transition-none text-white" href="{{ home_url('/') }}">
-        {!! $logo !!} {!! $siteName !!}
+        {!! $logo !!}
+        @if($header_middle || $header_top || $header_bootom)
+          <div class="brand-text [&_p]:opacity-100 [&_p]:uppercase [&_p]:font-black">
+            @if($header_top)
+              <p class="tracking-[1px] leading-[16px]">{{ $header_top }}</p>
+            @endif
+              @if($header_middle)
+                <p class="text-[25px] leading-[28px]">{{ $header_middle }}</p>
+              @endif
+              @if($header_bottom)
+                <p class="tracking-[1px] text-[7px] leading-[20px]">{{ $header_bottom }}</p>
+              @endif
+          </div>
+        @else
+          {!! $siteName !!}
+        @endif
       </a>
       <button id="menu-toggle" class="menu-toggle xlg:hidden fixed top-26 h-24 w-24 right-15 z-10 p-5 flex items-center justify-center">
         <svg width="19" height="13" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="open absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-500 opacity-100">

@@ -111,3 +111,7 @@ add_filter( 'gform_submit_button', function ($button, $form) {
               <p class=''>$button__text</p>";
 }, 10, 2 );
 
+add_filter('gform_validation_message', function ($message, $form) {
+    return 'Виникла проблема з вашою відправкою. Будь ласка, перегляньте поля нижче.';
+}, 10, 2);
+

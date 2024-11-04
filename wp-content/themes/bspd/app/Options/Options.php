@@ -42,6 +42,24 @@ class Options extends Field
                     'width' => '50',
                 ]
             ])
+            ->addText('header_top', [
+                'label' => 'Лого текст вверх',
+                'wrapper' => [
+                    'width' => '51',
+                ]
+            ])
+            ->addText('header_middle', [
+                'label' => 'Лого текст середина',
+                'wrapper' => [
+                    'width' => '51',
+                ]
+            ])
+            ->addText('header_bottom', [
+                'label' => 'Лого текст низ',
+                'wrapper' => [
+                    'width' => '51',
+                ]
+            ])
             ->addTab('Контакти')
             ->addTextarea('contacts_title', [
                 'label' => 'Заголовок',
